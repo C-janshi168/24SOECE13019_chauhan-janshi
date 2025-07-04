@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace _24SOECE13019_Chauhan_janshi
 {
-    internal class Class1
+    internal class Par1
     {
+       public static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World");
+        }
     }
 }
+ 
