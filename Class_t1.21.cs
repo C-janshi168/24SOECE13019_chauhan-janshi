@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _24SOECE13019_Chauhan_janshi
 {
@@ -10,26 +6,36 @@ namespace _24SOECE13019_Chauhan_janshi
     {
         public static void Main(string[] args)
         {
+            // Ask user how many terms they want in the series
             Console.Write("Enter the number of terms: ");
-            int terms = Convert.ToInt32(Console.ReadLine());
+            int totalTerms = Convert.ToInt32(Console.ReadLine());
 
+            // Ask for the digit to be repeated (base number)
             Console.Write("Enter the base number: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            int digit = Convert.ToInt32(Console.ReadLine());
 
-            int sum = 0;
-            int termValue = 0;
+            int currentTerm = 0;  // Stores each new term in the pattern (like 2, 22, 222)
+            int sum = 0;          // Stores total sum of all terms
 
             Console.Write("Series: ");
-            for (int i = 1; i <= terms; i++)
-            {
-                termValue = termValue * 10 + num;
-                sum += termValue;
 
-                Console.Write(termValue);
-                if (i != terms) Console.Write(" + ");
+            // Loop to generate the series and sum the values
+            for (int i = 1; i <= totalTerms; i++)
+            {
+                currentTerm = currentTerm * 10 + digit;  // Builds terms like 2 → 22 → 222
+                sum += currentTerm;                      // Add term to total sum
+
+                Console.Write(currentTerm);
+
+                // Print plus symbol between terms, but not after the last one
+                if (i != totalTerms)
+                    Console.Write(" + ");
             }
 
+            // Print the final sum of the series
             Console.WriteLine("\nThe Sum is: " + sum);
+
+            Console.ReadLine(); // Keep console open after output
         }
     }
 }

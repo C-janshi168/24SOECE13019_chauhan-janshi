@@ -1,20 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _24SOECE13019_Chauhan_janshi
 {
-    internal class Class_t8
+    internal class Class_t12
     {
         public static void Main(string[] args)
         {
-            {
-                Console.Write("Enter Name: ");
-                string name = Console.ReadLine();
-                Console.WriteLine("Output: " + name);
-            }
+            // Step 1: Prompt user to enter their name
+            Console.Write("Enter your name: ");
+
+            // Step 2: Store the entered name in a variable
+            string userName = Console.ReadLine();
+
+            // Step 3: Print the same name back as output
+            Console.WriteLine("Output: " + userName);
         }
     }
 }

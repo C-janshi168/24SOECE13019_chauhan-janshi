@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _24SOECE13019_Chauhan_janshi
 {
@@ -10,16 +6,24 @@ namespace _24SOECE13019_Chauhan_janshi
     {
         public static void Main(string[] args)
         {
-            int n1 = 0, n2 = 1, n3, i;
-            Console.Write(n1 + " " + n2 + " ");
-            for (i = 2; i < 11; ++i)
+            // Declare first two numbers of the Fibonacci series
+            int first = 0, second = 1, next, i;
+
+            // Print the first two numbers directly
+            Console.Write(first + " " + second + " ");
+
+            // Start loop from 2 because first two numbers are already printed
+            for (i = 2; i < 11; i++) // Loop will run until we have 11 terms
             {
-                n3 = n1 + n2;
-                Console.Write(n3 + " ");
-                n1 = n2;
-                n2 = n3;
+                next = first + second;     // Add the previous two numbers
+                Console.Write(next + " "); // Print the next number
+
+                // Shift values to prepare for next iteration
+                first = second;
+                second = next;
             }
+
+            Console.ReadLine(); // Keeps the console window open (optional)
         }
     }
 }
-

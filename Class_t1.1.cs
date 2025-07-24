@@ -8,20 +8,25 @@ namespace _24SOECE13019_Chauhan_janshi
 {
     internal class Class_t12
     {
-            // Instance method to display a message
-            public void DisplayMessage()
+        // This method prints a simple message to the console
+        public void DisplayMessage()
         {
-            Console.WriteLine("Hello world..");
+            Console.WriteLine("Hello world..");  // Output line
         }
 
         static void Main(string[] args)
         {
-            Class1 D = new Class1();
-            // Create an instance of Geeks
-            // Call the instance method
-            // directly
-            D.DisplayMessage();
+            // Creating object of Class_t12 to access its method
+            Class_t12 obj1 = new Class_t12();
+
+            // Calling the display method
+            obj1.DisplayMessage();
+
+            // Keeping console window open
+            Console.ReadLine();
+
+            // Temporary variable for testing (not used)
+            int unused = 0;
         }
     }
 }
-

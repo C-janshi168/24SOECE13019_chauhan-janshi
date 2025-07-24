@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _24SOECE13019_Chauhan_janshi
 {
@@ -10,27 +6,37 @@ namespace _24SOECE13019_Chauhan_janshi
     {
         public static void Main(string[] args)
         {
-            int rows = 5;
+            int rows = 5;  // Total rows for the upper half of the diamond
 
-            // Upper half
+            // Print upper triangle part
             for (int i = 1; i <= rows; i++)
             {
-                for (int j = i; j < rows; j++)
+                // Print spaces before stars
+                for (int space = i; space < rows; space++)
                     Console.Write(" ");
-                for (int k = 1; k <= (2 * i - 1); k++)
+
+                // Print stars in odd count (1, 3, 5, ...)
+                for (int star = 1; star <= (2 * i - 1); star++)
                     Console.Write("*");
-                Console.WriteLine();
+
+                Console.WriteLine(); // Move to next line
             }
 
-            // Lower half
+            // Print lower inverted triangle part
             for (int i = rows - 1; i >= 1; i--)
             {
-                for (int j = rows; j > i; j--)
+                // Print spaces before stars
+                for (int space = rows; space > i; space--)
                     Console.Write(" ");
-                for (int k = 1; k <= (2 * i - 1); k++)
+
+                // Print stars in decreasing odd count
+                for (int star = 1; star <= (2 * i - 1); star++)
                     Console.Write("*");
-                Console.WriteLine();
+
+                Console.WriteLine(); // Move to next line
             }
+
+            Console.ReadLine(); // Keep console window open
         }
     }
 }

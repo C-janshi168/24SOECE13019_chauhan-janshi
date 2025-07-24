@@ -8,17 +8,22 @@ namespace _24SOECE13019_Chauhan_janshi
 {
     internal class Class_t4
     {
-            static void Main(string[] args)
-            {
-                Console.WriteLine("Enter your full name:");
-                string name = Console.ReadLine(); // Read the input
+        // Main method - execution starts from here
+        static void Main(string[] args)
+        {
+            // Asking user to enter their full name
+            Console.WriteLine("Enter your full name:");
 
-                string upperName = name.ToUpper(); // Convert to uppercase
+            string nameInput = Console.ReadLine(); // Read name from user
 
-                Console.WriteLine("Name in uppercase:");
-                Console.WriteLine(upperName); // Display output
+            // Converting name to uppercase format
+            string upperName = nameInput.ToUpper();
 
-                Console.ReadLine(); // Keep console open
-            }
+            // Displaying the name in uppercase
+            Console.WriteLine("Name in uppercase:");
+            Console.WriteLine(upperName);
+
+            Console.ReadLine(); // Waits for user to press Enter before closing
         }
     }
+}

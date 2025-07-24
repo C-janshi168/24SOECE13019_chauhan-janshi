@@ -9,30 +9,27 @@ namespace _24SOECE13019_Chauhan_janshi
 {
     internal class Class_t3
     {
-            static void Main(string[] args)
+        // Main method - entry point of the program
+        static void Main(string[] args)
+        {
+            int number, result, i;
+
+            // Asking user to enter a number
+            Console.WriteLine("Enter a number:");
+            number = Convert.ToInt32(Console.ReadLine());  // Read and convert input to integer
+
+            i = 1;  // Start value for multiplication loop
+
+            // Loop to print multiplication table up to 10
+            while (i <= 10)
             {
-                int num1, res, i;
+                result = number * i;  // Multiply number with current i
+                Console.WriteLine(number + " x " + i + " = " + result);  // Display result
 
-                Console.WriteLine("Enter a number");
-                num1 = Convert.ToInt32(Console.ReadLine());
-
-
-                i = 1; //Initialization
-
-
-
-                //Check whether condition matches or not
-                while (i <= 10)
-                {
-                    res = num1 * i;
-                    Console.WriteLine("{0} x {1} = {2}", num1, i, res);
-
-
-                    i++; //Increment by one
-                }
-                Console.ReadLine();
+                i++;  // Increase counter by 1
             }
+
+            Console.ReadLine();  // Keeps the console window open
         }
     }
-
-
+}

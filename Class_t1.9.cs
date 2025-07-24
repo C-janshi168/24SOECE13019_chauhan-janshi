@@ -6,37 +6,41 @@ using System.Threading.Tasks;
 
 namespace _24SOECE13019_Chauhan_janshi
 {
-    internal class Class_t5
+    internal class ToggleCaseProgram
     {
-            static void Main(string[] args)
-            {
-                Console.WriteLine("Enter your name:");
-                string input = Console.ReadLine(); // Read user input
+        static void Main(string[] args)
+        {
+            // Ask the user to enter their full name
+            Console.Write("Enter your full name: ");
+            string inputName = Console.ReadLine(); // Get input from user
 
-            string toggleCase = "";
+            string convertedName = ""; // This will hold the final toggle case result
 
-            foreach (char ch in input)
+            // Loop through each character in the input
+            foreach (char c in inputName)
             {
-                if (char.IsUpper(ch))
+                // If character is uppercase, convert it to lowercase
+                if (char.IsUpper(c))
                 {
-                    toggleCase += char.ToLower(ch); // Convert to lowercase
-                    }
-                    else if (char.IsLower(ch))
-                    {
-                        toggleCase += char.ToUpper(ch); // Convert to uppercase
-                    }
-                    else
-                    {
-                        toggleCase += ch; // Keep spaces and other characters as is
-                    }
+                    convertedName += char.ToLower(c);
                 }
-
-                Console.WriteLine("Name in toggle case:");
-                Console.WriteLine(toggleCase); // Display result
-
-                Console.ReadLine(); // Pause console
+                // If character is lowercase, convert it to uppercase
+                else if (char.IsLower(c))
+                {
+                    convertedName += char.ToUpper(c);
+                }
+                else
+                {
+                    // Leave other characters (like spaces) as they are
+                    convertedName += c;
+                }
             }
+
+            // Show the name in toggle case format
+            Console.WriteLine("Name in toggle case:");
+            Console.WriteLine(convertedName);
+
+            Console.ReadLine(); // Keep the console open after output
         }
     }
-
-
+}

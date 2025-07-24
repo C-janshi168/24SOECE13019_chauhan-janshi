@@ -8,23 +8,27 @@ namespace _24SOECE13019_Chauhan_janshi
 {
     internal class Class_tdeatils
     {
+        // Main method - entry point of the program
         public static void Main(string[] args)
         {
+            // asking user to enter a number
             Console.Write("Enter a number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
 
-            if (number % 2 == 0)
+            // reading input and converting it to integer
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            // checking if the number is even using modulus
+            if (num % 2 == 0)
             {
-                Console.WriteLine($"{number} is Even.");
+                Console.WriteLine(num + " is Even.");  // print if even
             }
             else
             {
-                Console.WriteLine($"{number} is Odd.");
+                Console.WriteLine(num + " is Odd.");   // print if odd
             }
 
-            Console.ReadLine(); // Wait for user input before closing
+            // wait for user input so con
         }
     }
-
 }
-
+}

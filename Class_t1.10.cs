@@ -1,29 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _24SOECE13019_Chauhan_janshi
 {
-    internal class Class_t9
+    internal class MaskMobileNumber
     {
-            public static void Main(string[] args)
-            {
-                Console.Write("Enter Mobile Number: ");
-                string mobile = Console.ReadLine();
+        public static void Main(string[] args)
+        {
+            // Step 1: Ask the user to enter a mobile number
+            Console.Write("Enter Mobile Number: ");
+            string inputNumber = Console.ReadLine(); // Read number from console
 
-                // Check if the mobile number is at least 5 digits
-                if (mobile.Length >= 5)
-                {
-                    string masked = mobile.Substring(0, mobile.Length - 5) + "XXXXX";
-                    Console.WriteLine("Masked Number: " + masked);
-                }
-                else
-                {
-                    Console.WriteLine("Mobile number is too short.");
-                }
+            // Step 2: Check if the input has at least 5 digits
+            if (inputNumber.Length >= 5)
+            {
+                // Keep all digits except the last 5, and replace them with 'X's
+                string maskedNumber = inputNumber.Substring(0, inputNumber.Length - 5) + "XXXXX";
+
+                // Step 3: Show the masked number
+                Console.WriteLine("Masked Number: " + maskedNumber);
+            }
+            else
+            {
+                // If the number is too short, show a warning
+                Console.WriteLine("Mobile number is too short.");
             }
         }
     }
-
+}

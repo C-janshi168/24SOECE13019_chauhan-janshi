@@ -7,19 +7,29 @@ using System.Threading.Tasks;
 namespace _24SOECE13019_Chauhan_janshi
 {
     internal class Class_t1
+    {
+        // Main method - starting point of execution
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
+            int number, factorial = 1;  // 'number' stores user input, 'factorial' holds the result
+
+            // Asking the user to input a number
+            Console.Write("Enter Number : ");
+            string userInput = Console.ReadLine();  // Read input as string
+
+            // Convert the input to integer
+            number = Convert.ToInt32(userInput);
+
+            // Loop to calculate factorial
+            for (int i = 1; i <= number; i++)
             {
-                int n, fact = 1; // Declare variables for number and factorial
-                Console.Write("Enter Number : "); // Prompt user for input
-                string str = Console.ReadLine(); // Read input from console
-                n = Convert.ToInt32(str); // Convert input string to integer
-                for (int i = 1; i <= n; i++) // Loop from 1 to n
-                {
-                    fact = fact * i; // Calculate factorial
-                }
-                Console.Write("Factorial : {0}", fact); // Output the factorial result
-                Console.Read(); // Wait for user input before closing
+                factorial = factorial * i;  // multiply current value with i
             }
+
+            // Display the final factorial result
+            Console.WriteLine("Factorial : " + factorial);
+
+            Console.Read();  // keep console open until user presses a key
         }
     }
+}
